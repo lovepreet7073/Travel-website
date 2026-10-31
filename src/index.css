@@ -1,0 +1,82 @@
+@import "tailwindcss";
+/* Plus Jakarta Sans is loaded via a <link> in index.html, not a CSS @import
+   here — Tailwind's own `@import "tailwindcss"` expands into real CSS rules
+   during the Vite build, which pushes this @import after other rules in the
+   generated output and made Lightning CSS silently drop it (every site page
+   was quietly rendering in the browser's fallback sans-serif instead of the
+   brand font). A <link> loads independently of CSS processing order. */
+
+@theme {
+  --color-*: initial; /* remove Tailwind's default palette */
+  --color-white: #ffffff;
+  --color-transparent: transparent;
+
+  --color-primary: #134e5e;
+  --color-primary-hover: #0e3d4a;
+  --color-primary-foreground: #ffffff;
+  --color-accent: #c6794a;
+  --color-highlight: #f7d15c;
+  --color-rating: #f5b400;
+  --color-danger: #c0392b;
+
+  --color-background: #ffffff;
+  --color-panel: #f3e8da;
+  --color-surface: #ffffff;
+  --color-foreground: #1a1a1a;
+  --color-body: #4f4f4f;
+  --color-muted-foreground: #8a8a8a;
+  --color-border: #e7e2da;
+  --color-divider-accent: #e9b9a0;
+
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --text-display: 4rem;      --text-display--line-height: 1.1;
+  --text-h2: 2.25rem;        --text-h2--line-height: 1.2;
+  --text-h3: 1.75rem;        --text-h3--line-height: 1.25;
+  --text-title: 1.25rem;     --text-title--line-height: 1.3;
+  --text-body-lg: 1.125rem;  --text-body-lg--line-height: 1.6;
+  --text-body: 1rem;         --text-body--line-height: 1.6;
+  --text-sm: 0.875rem;       --text-sm--line-height: 1.5;
+  --text-xs: 0.75rem;        --text-xs--line-height: 1.4;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 40px;
+
+  --shadow-card: 0 8px 24px rgb(19 78 94 / 0.08);
+  --shadow-float: 0 16px 40px rgb(19 78 94 / 0.12);
+
+  --container-page: 1200px;
+
+  /* Structural addition, not a color/font/spacing/radius/shadow token:
+     DestinationCard images require a 4:3 ratio (DESIGN.md section 7). */
+  --aspect-4-3: 4 / 3;
+}
+/* The Home hero image went through a few custom portrait ratios here
+   (3:4 → 4:5 → 5:6) on repeated "shorter, please" requests; it's now at
+   Tailwind's built-in aspect-square utility, so no custom token remains. */
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-foreground);
+  background: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scroll-reveal / hover-lift motion (ui/Reveal.jsx, Card's `interactive`
+   lift) is plain opacity/transform/transition — no new color, font, size,
+   radius or shadow tokens. This just respects the user's OS-level motion
+   preference for all of it. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
