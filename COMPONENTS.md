@@ -63,7 +63,7 @@ This setup was later asked to build a booking-flow screen (`src/pages/Booking.js
 
 ## Screens build (React Router shell + pages)
 
-Building out the actual site (Home, Destinations, Hotels, Flights, booking, account and content pages) against a Jadoo-template screenshot (layout reference only — no colors/fonts/spacing/copy/images carried over; brand name "Wandera"). Two more gaps came up and were approved before building:
+Building out the actual site (Home, Destinations, Hotels, Flights, booking, account and content pages) against a Jadoo-template screenshot (layout reference only — no colors/fonts/spacing/copy/images carried over; brand name "Vendra"). Two more gaps came up and were approved before building:
 
 - **FeatureBlock** (see row above) — the screenshot's services grid and 3-step list both needed an icon+title+description block, which nothing in the system covered.
 - **ProgressBar** (see row above) — a floating "trip 40% completed" card needed a progress indicator, which didn't exist.
@@ -132,7 +132,7 @@ Lesson for future mock-data additions in this repo: don't add an unauthenticated
 Ran a full `check` pass (lint + code review + Playwright visual audit across all 16 routes at desktop 1280 / mobile 390) via the `design-consistent` skill. Findings and outcomes:
 
 - **Font never actually loaded, site-wide** — `src/index.css`'s Google Fonts `@import url(...)` was silently dropped by Vite's CSS pipeline: `@import "tailwindcss"` expands into real CSS rules before Lightning CSS's final pass, which pushes the font `@import` out of valid leading position (CSS requires all `@import`s before other rules) and it gets dropped rather than erroring — visible the whole session as an easy-to-dismiss `@import rules must precede all rules` build warning, but the real effect was every page rendering in the browser's fallback sans-serif instead of Plus Jakarta Sans. **Fixed**: font now loads via `<link>`/`<link rel="preconnect">` tags in `index.html`, independent of CSS import ordering. Verified via `document.fonts` (now reports all 4 weights `loaded`, previously empty).
-- **`index.html`'s `<title>`** was leftover placeholder text, `Package Details — Callback Modal`, present since before this design-system work started, never touched. **Fixed** → `Wandera — Travel, enjoy and live a new and full life`.
+- **`index.html`'s `<title>`** was leftover placeholder text, `Package Details — Callback Modal`, present since before this design-system work started, never touched. **Fixed** → `Vendra — Travel, enjoy and live a new and full life`.
 - **Kyoto / Gion Machiya Inn used the wrong photo** — picsum id `1024`, mislabeled "misty forest" during the original curation pass, is actually a vulture in flight (also present as a gallery photo on London / Notting Hill Townhouse). **Fixed**: every `1024` reference swapped to `1039` (re-verified: a waterfall in misty forest), across both `image` and `gallery` fields in `destinations.js` and `hotels.js`.
 - **`FlightsResults.jsx`: stops Badge stretched full-width on mobile** — its wrapping `flex flex-col` had no `items-start`, so the flex-item Badge stretched to the column's full width once the layout stacked at narrow widths. **Fixed**: added `items-start`.
 - **`SectionCard` duplicated** (byte-for-byte) in `Booking.jsx` and `FlightBooking.jsx`. **Fixed**: extracted to `ui/SectionCard.jsx` (see row above); both pages now import it.

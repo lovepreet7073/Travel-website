@@ -138,7 +138,7 @@ export default function DestinationDetail() {
           <p className="text-title font-medium text-foreground">We couldn't find that destination</p>
           <p className="max-w-md text-sm text-body">
             It may have been renamed or removed from the catalog. Take a look at everywhere else
-            Wandera goes.
+            Vendra goes.
           </p>
           <Button as={Link} to="/destinations" variant="primary">
             Back to destinations

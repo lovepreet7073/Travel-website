@@ -186,7 +186,7 @@ export default function Contact() {
                 </span>
                 <div>
                   <p className="text-sm font-medium text-foreground">Email support</p>
-                  <p className="text-sm text-body">hello@wandera.com</p>
+                  <p className="text-sm text-body">hello@vendra.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">

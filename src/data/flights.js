@@ -10,7 +10,7 @@ export const airports = [
 export const flights = [
   {
     id: "wa-101",
-    airline: "Wandera Air",
+    airline: "Vendra Air",
     from: "New York",
     fromCode: "JFK",
     to: "London",
@@ -55,7 +55,7 @@ export const flights = [
   },
   {
     id: "wa-420",
-    airline: "Wandera Air",
+    airline: "Vendra Air",
     from: "New York",
     fromCode: "JFK",
     to: "London",

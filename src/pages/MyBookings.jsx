@@ -66,7 +66,7 @@ export default function MyBookings() {
         <SectionHeader
           className="mb-0"
           title="My Bookings"
-          intro="Every trip, stay and flight you've booked with Wandera, all in one place."
+          intro="Every trip, stay and flight you've booked with Vendra, all in one place."
         />
       </Reveal>
 

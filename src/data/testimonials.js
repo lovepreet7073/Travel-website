@@ -2,7 +2,7 @@ export const testimonials = [
   {
     id: "t1",
     quote:
-      "Wandera planned our whole Italy trip in a weekend. Every hotel and transfer was already booked when we landed — we just showed up and wandered.",
+      "Vendra planned our whole Italy trip in a weekend. Every hotel and transfer was already booked when we landed — we just showed up and explored.",
     author: "Amara Osei",
     location: "Accra, Ghana",
     avatar: "https://i.pravatar.cc/120?img=32",
@@ -11,7 +11,7 @@ export const testimonials = [
   {
     id: "t2",
     quote:
-      "I booked a solo trip to Kyoto through Wandera and the itinerary still left plenty of room to get lost on purpose. Exactly what I wanted.",
+      "I booked a solo trip to Kyoto through Vendra and the itinerary still left plenty of room to get lost on purpose. Exactly what I wanted.",
     author: "Daniel Cho",
     location: "Seoul, South Korea",
     avatar: "https://i.pravatar.cc/120?img=51",

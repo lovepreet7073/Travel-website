@@ -54,7 +54,7 @@ export default function FlightsSearch() {
         <span className="text-sm font-medium uppercase tracking-wide text-primary">Flights</span>
         <h1 className="text-h2 font-extrabold text-foreground sm:text-display">Find your next flight</h1>
         <p className="max-w-xl text-body text-body">
-          Compare nonstop and connecting fares across Wandera's partner airlines, then pick the one that
+          Compare nonstop and connecting fares across Vendra's partner airlines, then pick the one that
           fits your trip.
         </p>
       </Reveal>

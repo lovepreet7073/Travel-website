@@ -55,7 +55,7 @@ export default function DestinationsListing() {
         <SectionHeader
           className="mb-0"
           title="Destinations"
-          intro="Every trip Wandera curates, in one place — search by name or city to find the one that fits."
+          intro="Every trip Vendra curates, in one place — search by name or city to find the one that fits."
         />
       </Reveal>
 

@@ -25,7 +25,7 @@ export const bookings = [
   {
     id: "bk-1021",
     type: "flight",
-    title: "JFK → LHR · Wandera Air",
+    title: "JFK → LHR · Vendra Air",
     image: "https://picsum.photos/id/1019/400/300",
     status: "completed",
     progress: 100,

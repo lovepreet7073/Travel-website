@@ -66,14 +66,14 @@ export default function About() {
             <span className="text-sm font-medium uppercase tracking-wide text-primary">
               Our story
             </span>
-            <h1 className="text-h3 font-bold text-foreground">Why Wandera exists</h1>
+            <h1 className="text-h3 font-bold text-foreground">Why Vendra exists</h1>
             <p className="text-body text-body">
-              Wandera started with a shared annoyance: booking a trip meant twenty open tabs,
+              Vendra started with a shared annoyance: booking a trip meant twenty open tabs,
               three currencies of confusion and a hotel photo that never quite matched what
               showed up. We wanted a way to plan a trip that felt as good as the trip itself.
             </p>
             <p className="text-body text-body">
-              So we built one. Every flight, hotel and experience on Wandera is checked by
+              So we built one. Every flight, hotel and experience on Vendra is checked by
               someone on our team before it's listed, and every itinerary leaves room to
               wander off it. We're not trying to plan your trip down to the minute — we're
               trying to clear the busywork so you can actually enjoy the planning part too.
@@ -103,7 +103,7 @@ export default function About() {
             align="center"
             className="mb-0"
             title="What we hold ourselves to"
-            intro="The things that don't change no matter how big Wandera gets."
+            intro="The things that don't change no matter how big Vendra gets."
           />
         </Reveal>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -122,7 +122,7 @@ export default function About() {
             <SectionHeader
               className="mb-0"
               title="What people say about us"
-              intro="Stories from travelers who let Wandera handle the details."
+              intro="Stories from travelers who let Vendra handle the details."
             />
           </Reveal>
           <Reveal delay={1}>

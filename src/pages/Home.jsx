@@ -44,7 +44,7 @@ const services = [
   {
     icon: <BedIcon className="size-6" />,
     title: "Curated Hotels",
-    description: "Every hotel on Wandera is visited and vetted by our team before it's listed.",
+    description: "Every hotel on Vendra is visited and vetted by our team before it's listed.",
   },
   {
     icon: <HeadsetIcon className="size-6" />,
@@ -161,7 +161,7 @@ export default function Home() {
               Travel, enjoy and live a new and full life
             </h1>
             <p className="max-w-xl text-body-lg text-body">
-              Wandera plans the flights, hotels and small details so your only job on the trip is
+              Vendra plans the flights, hotels and small details so your only job on the trip is
               to show up and enjoy it.
             </p>
             <div className="flex flex-wrap items-center gap-4">
@@ -347,7 +347,7 @@ export default function Home() {
               className="mb-0"
               eyebrow="Testimonials"
               title="What people say about us"
-              intro="Stories from travelers who let Wandera handle the details."
+              intro="Stories from travelers who let Vendra handle the details."
             />
           </Reveal>
           <Reveal delay={1}>
@@ -389,7 +389,7 @@ export default function Home() {
               <SendIcon />
             </IconButton>
             <h2 className="max-w-xl text-h3 font-bold text-foreground">
-              Subscribe to get travel tips, fare drops and new destinations from Wandera
+              Subscribe to get travel tips, fare drops and new destinations from Vendra
             </h2>
             <form
               onSubmit={handleSubscribe}

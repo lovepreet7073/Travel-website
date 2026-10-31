@@ -7,7 +7,7 @@ import { navLinks, footerColumns, footerSocialLinks } from "../../data/nav";
 const logo = (
   <>
     <span className="size-3 rounded-full bg-accent" aria-hidden="true" />
-    <span className="font-extrabold">Wandera</span>
+    <span className="font-extrabold">Vendra</span>
   </>
 );
 
@@ -38,10 +38,10 @@ export default function RootLayout() {
       </main>
       <Footer
         logo={logo}
-        tagline="Plan less, wander more."
+        tagline="Plan less, explore more."
         columns={footerColumns}
         socialLinks={footerSocialLinks}
-        copyright={`© ${new Date().getFullYear()} Wandera. All rights reserved.`}
+        copyright={`© ${new Date().getFullYear()} Vendra. All rights reserved.`}
       />
     </div>
   );
